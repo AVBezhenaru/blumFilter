@@ -28,13 +28,13 @@ class BloomFilter:
         index = self.hash1(str1)
         self.bitarray[index] = index
         index2 = self.hash2(str1)
-        self.bitarray[index2] = index2
+        self.bitarray[index2] = index
 
     def is_value(self, str1):
         index = self.hash1(str1)
         index2 = self.hash2(str1)
 
-        if self.bitarray[index] == True and self.bitarray[index2] == True:
-            return True
+        if self.bitarray[index] == False or self.bitarray[index2] == False:
+            return False
 
-        return False
+        return True
