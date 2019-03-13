@@ -9,6 +9,8 @@ class BloomFilter:
     def hash1(self, str1):
         index = 0
         for c in str1:
+            print(c)
+            print(str1)
             code = ord(c)
             index = (index * 17) + code
 
